@@ -1,0 +1,87 @@
+.pic_container img 
+{
+	width: 100%;
+}
+
+.card-footer {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+	border-top: none;
+}
+
+/* Home Page */
+.banner {
+	border-radius: 3px;
+}
+
+/* About Me Page */
+.jean-pic {
+	border-radius: 360px;
+	width: 100%;
+	margin-bottom: 1%;
+}
+.text-container {
+	padding-top: 12%;
+}
+
+/* Projects Page */
+
+.projectImg {
+	width: 100%;
+}
+.projectRow {
+	margin: 1%;
+}
+.projectTitle {
+	font-weight: bold;
+}
+.projectText {
+	padding-top: 2%;
+    text-align: justify;
+    font-style: italic;
+}
+
+/* Contact Page */
+.contact-form {
+	padding: 3%;
+}
+
+/* Post Pages */
+
+.postReturn {
+	margin: 0.5%;
+}
+/* Back-end Admin Page */
+.back-btn {
+	height: 110px;
+	width: 100%;
+	border-color: black;
+	color: white;
+}
+.back-col {
+	margin-top: 10px;
+	margin-bottom: 4px;
+	color: white;
+}	
+.back-primary {
+	background-color: #455464;
+}
+.back-success {
+    background-color: #406A9C;
+}
+.back-danger {
+    background-color: #334638;
+}
+.back-warning {
+    background-color: #46342B;
+}
+.back-btn:hover {
+    background-color: white;
+    color: black;
+    border-color: navy;
+}
+
+/* CRUD */
+
+.deleteBtn {
+	margin-bottom: 1%;
+}
