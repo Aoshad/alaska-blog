@@ -14,7 +14,7 @@ function listPostsToModify()
     $postManager = new \David\AlaskaBlog\Model\PostManager();
     $posts = $postManager->getPosts();
 
-    require('view/backend/listsPostsToModifyView.php');
+    require('view/backend/listPostsToModifyView.php');
 }
 
 function postToModify($postId)
@@ -36,6 +36,13 @@ function deletePost($id)
     $posts = $postManager->getPosts();
 
 
-    require('view/backend/listsPostsToModifyView.php');
+    require('view/backend/listPostsToModifyView.php');
 }
 
+function moderateComment()
+{
+    $commentManager = new \David\AlaskaBlog\Model\commentManager();
+    $reportedComments = $commentManager->getReports();
+
+    require('view/backend/listReportsView.php');
+}

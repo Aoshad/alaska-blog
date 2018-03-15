@@ -96,6 +96,10 @@ try {
                 throw new Exception('La suppression n\'a pas pu être effectuée');
             }
         }
+
+        elseif ($_GET['action'] == 'moderateComment') {
+            moderateComment();
+        }
     }
 
     // Show Home Page With Last Post

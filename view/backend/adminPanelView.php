@@ -17,7 +17,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 back-col">
-                <a><button class="btn-danger back-danger btn-lg back-btn">Modérer des commentaires</button></a>
+                <a href="index.php?action=moderateComment"><button class="btn-danger back-danger btn-lg back-btn">Modérer des commentaires</button></a>
             </div>
         </div>
         <div class="row">
