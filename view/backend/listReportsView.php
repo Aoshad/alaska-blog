@@ -17,9 +17,7 @@
                 <div class="card mb-4">
                     <?php
                     while ($data = $reportedComments->fetch())
-                    {
-                        if($data['report'] == 1) {
-                            ?>
+                    { ?>
                             <div class="card-body">
                                 <p class="card-text"><?= nl2br(htmlspecialchars($data['content'])) ?></p>
                                 <a class="btn btn-success">Conserver</a>
@@ -29,16 +27,11 @@
                                 <p><strong>Le : </strong><?= $data['comment_date_fr'] ?></p>
                                 <p><strong>Auteur : </strong> <?= $data['author'] ?></p>
                             </div>
-                        <?php } else { ?>
-                            <div>
-                                <p>Il n'y aucun commentaire à modérer pour l'instant</p>
-                            </div>
-                        <?php } ?>
 
 
                     <?php
                     }
-                    $reportedComments->closeCursor();
+                     $reportedComments->closeCursor();
                     ?>
 
                 </div>
