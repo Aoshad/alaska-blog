@@ -7,12 +7,12 @@
 
         <div class="row">
             <div class="col-md-12 back-col">
-                <a><button class="btn-primary back-primary btn-lg back-btn">Ecrire un article</button></a>
+                <a href="index.php?action=addPost"><button class="btn-primary back-primary btn-lg back-btn">Ecrire un article</button></a>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12 back-col">
-                <a href="index.php?action=updateDeleteComment"><button class="btn-success back-success btn-lg back-btn">Modifier ou supprimer un article</button></a>
+                <a href="index.php?action=updateDeletePost"><button class="btn-success back-success btn-lg back-btn">Modifier ou supprimer un article</button></a>
             </div>
         </div>
         <div class="row">

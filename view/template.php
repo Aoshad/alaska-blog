@@ -59,8 +59,10 @@
       <!-- /.container -->
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
+    <!-- Core JavaScript -->
     <script src="public/js/jquery.js"></script>
+    <script src="public/js/tinymce/tinymce.min.js"></script>
+    <script src="public/js/tinymce/init-tinymce.js"></script>
     <script src="public/js/bootstrap.bundle.js"></script>
 
 </html>

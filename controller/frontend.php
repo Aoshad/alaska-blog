@@ -72,7 +72,7 @@ function contactForm() {
 }
 
 function enterAdmin($pseudo) {
-    if ($pseudo == $dbPseudo) {
+    if ($pseudo == "JForteroche") {
         require('view/backend/adminPanelView.php');
     } else {
         echo 'le mot de passe n\'est pas bon';

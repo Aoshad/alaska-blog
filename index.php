@@ -62,7 +62,7 @@ try {
 
         // Login For Admin
         elseif ($_GET['action'] == 'enterAdmin') {
-            if (!empty($_POST['pseudoInput'] && $_POST['passInput'])) {
+            if (!empty($_POST['pseudoInput'])) {
                 enterAdmin($_POST['pseudoInput']);
             }
             else {
@@ -72,7 +72,10 @@ try {
         }
 
         // Modify Comment For The Admin
-        elseif ($_GET['action'] == 'updateDeleteComment') {
+        elseif($_GET['action'] == 'addPost') {
+            addPost();
+        }
+        elseif ($_GET['action'] == 'updateDeletePost') {
             listPostsToModify();
         }
 

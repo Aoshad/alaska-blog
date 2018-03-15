@@ -4,6 +4,11 @@
 require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
 
+function addPost()
+{
+    require('view/backend/tinyMceView.php');
+}
+
 function listPostsToModify()
 {
     $postManager = new \David\AlaskaBlog\Model\PostManager();
@@ -33,3 +38,4 @@ function deletePost($id)
 
     require('view/backend/listsPostsToModifyView.php');
 }
+
