@@ -83,7 +83,9 @@
             $comments->closeCursor();
             ?>
 
-            <a href="index.php?action=deletePost&amp;id=<?= $post['id'] ?>" ><button type="submit" class="deleteBtn btn btn-danger float-right">Supprimer l'article</button></a>
+            <a href="index.php?action=deletePost&amp;id=<?= $post['id'] ?>"><button type="submit" class="deleteBtn btn btn-danger float-right">Supprimer l'article</button></a>
+            <a href="index.php?action=modifyPost&amp;id=<?= $post['id'] ?>"><button type="submit" class="modifyBtn btn btn-success float-left ">Modifier l'article</button></a>
+
         </div>
 
 

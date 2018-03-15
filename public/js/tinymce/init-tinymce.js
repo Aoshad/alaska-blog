@@ -1,3 +1,10 @@
 tinymce.init({
-    selector: "textarea.tinymce"
+
+    /* Replace textarea with tinymce editor */
+    selector: "textarea.tinymce",
+
+    /* Format of the editor */
+    height: 350,
+    width: "100%"
+
 });

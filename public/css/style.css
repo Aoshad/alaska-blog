@@ -82,6 +82,7 @@
 
 /* CRUD */
 
-.deleteBtn {
+.deleteBtn, modifyBtn {
 	margin-bottom: 1%;
 }
+
