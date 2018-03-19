@@ -9,13 +9,12 @@
 
         <!-- TinyMce Integration -->
         <div class="col-lg-12">
-            <form action="index.php?action=addPost" method="post" >
-                <textarea class="tinymce"></textarea>
+            <form>
+                <textarea class="tinymce">$content</textarea>
             </form>
         </div>
 
     </div>
-
 
 </div>
 

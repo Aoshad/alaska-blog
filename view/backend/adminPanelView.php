@@ -7,7 +7,7 @@
 
         <div class="row">
             <div class="col-md-12 back-col">
-                <a href="index.php?action=addPost"><button class="back-primary btn-lg back-btn">Ecrire un article</button></a>
+                <a href="index.php?action=openTinyMce"><button class="back-primary btn-lg back-btn">Ecrire un article</button></a>
             </div>
         </div>
         <div class="row">

@@ -72,9 +72,14 @@ try {
         }
 
         // Modify Comment For The Admin
-        elseif($_GET['action'] == 'addPost') {
-            addPost();
+        elseif($_GET['action'] == 'openTinyMce') {
+            openTinyMce();
         }
+
+        elseif($_POST['action'] == 'addPost') {
+
+        }
+
         elseif ($_GET['action'] == 'updateDeletePost') {
             listPostsToModify();
         }
@@ -85,6 +90,12 @@ try {
             }
             else {
                 throw new Exception('Aucun identifiant de billet envoyé');
+            }
+        }
+
+        elseif ($_GET['action'] == 'modifyPost') {
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                modifyPost($_GET['id'], $_GET['contentPost']);
             }
         }
 

@@ -4,7 +4,7 @@
 require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
 
-function addPost()
+function openTinyMce()
 {
     require('view/backend/tinyMceView.php');
 }
@@ -28,6 +28,16 @@ function postToModify($postId)
     require('view/backend/postToModifyView.php');
 }
 
+function modifyPost($id, $content)
+{
+    $postManager = new \David\AlaskaBlog\Model\PostManager();
+    $postManager->modifyPost($id, $content);
+
+    $posts = $postManager->modifyPost($id, $content);
+
+    require('view/backend/modifTinyMceView.php');
+}
+
 function deletePost($id)
 {
     $postManager = new \David\alaskaBlog\model\PostManager();
@@ -46,3 +56,5 @@ function moderateComment()
 
     require('view/backend/listReportsView.php');
 }
+
+
