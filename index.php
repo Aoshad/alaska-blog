@@ -60,7 +60,7 @@ try {
             adminPageDemo();
         }
 
-        // Login For Admin
+        // LoginManager For Admin
         elseif ($_GET['action'] == 'enterAdmin') {
             if (!empty($_POST['pseudoInput'])) {
                 enterAdmin($_POST['pseudoInput']);
@@ -145,8 +145,15 @@ try {
         }
 
         elseif ($_GET['action'] == 'modifyPass') {
-            modifyPass();
+
+            if (!empty($_POST['newPass'])) {
+            modifyPass($_POST['newPass']);
+            }
+            else {
+                throw new Exception('Entrez un nouveau mot de passe');
+            }
         }
+
     }
 
     // Show Home Page With Last Post

@@ -47,6 +47,7 @@ function addComment($postId, $author, $content)
 }
 
 function commentReport($ID, $postId) {
+
     $commentManager = new \David\alaskaBlog\model\CommentManager();
     $commentManager->reporting($ID);
     echo '<script>alert("Le commentaire a bien été signalé");</script>';

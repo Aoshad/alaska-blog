@@ -14,7 +14,6 @@
                         <label class="col-md-4 control-label" for="newPass">Nouveau mot de passe</label>
                         <div class="col-md-4">
                             <input id="newPass" name="newPass" type="text" class="form-control input-md">
-
                         </div>
                     </div>
 

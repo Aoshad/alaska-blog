@@ -3,6 +3,7 @@
 //Chargement des classes
 require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
+require_once('model/LoginManager.php');
 
 function openTinyMce()
 {
@@ -107,7 +108,12 @@ function displayModifyPass() {
     require('view/backend/modifyPassView.php');
 }
 
-function modifyPass() {
+function modifyPass($pass) {
 
+    $loginManager = new \David\AlaskaBlog\Model\LoginManager();
+    $loginManager->sendNewPass($pass);
 
+    echo '<script>alert("Le mot de passe a bien été modifié");</script>';
+
+    require('view/backend/adminPanelView.php');
 }
