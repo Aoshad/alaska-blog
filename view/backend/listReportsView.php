@@ -20,8 +20,8 @@
                     { ?>
                             <div class="card-body">
                                 <p class="card-text"><?= nl2br(htmlspecialchars($data['content'])) ?></p>
-                                <a class="btn btn-success">Conserver</a>
-                                <a class="btn btn-danger">Supprimer</a>
+                                <a href="index.php?action=keepComment&amp;id=<?= $data['id'] ?>" class="btn btn-success">Conserver</a>
+                                <a href="index.php?action=deleteComment&amp;id=<?= $data['id'] ?>"class="btn btn-danger">Supprimer</a>
                             </div>
                             <div class="card-footer text-muted">
                                 <p><strong>Le : </strong><?= $data['comment_date_fr'] ?></p>

@@ -32,7 +32,7 @@
             <hr>
 
             <!-- Post Content -->
-            <p class="lead"><?= nl2br(htmlspecialchars($post['content'])) ?></p>
+            <p class="lead"><?= html_entity_decode($post['content']) ?></p>
 
             <hr>
 
@@ -84,7 +84,7 @@
             ?>
 
             <a href="index.php?action=deletePost&amp;id=<?= $post['id'] ?>"><button type="submit" class="deleteBtn btn btn-danger float-right">Supprimer l'article</button></a>
-            <a href="index.php?action=modifyPost&amp;id=<?= $post['id'] ?>&amp;contentPost=<?= $post['content'] ?>"><button type="submit" class="modifyBtn btn btn-success float-left ">Modifier l'article</button></a>
+            <a href="index.php?action=openModifyTinyMce&amp;id=<?= $post['id'] ?>"><button type="submit" class="modifyBtn btn btn-success float-left ">Modifier l'article</button></a>
 
         </div>
 

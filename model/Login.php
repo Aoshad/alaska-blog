@@ -13,6 +13,10 @@ class Login
         $db = $this->dbConnect();
         $req = $db->query('SELECT login FROM user');
         $dbPseudo = $req->fetch();
+    }
 
+    public function sendNewPass() {
+        $db = $this->dbConnect();
+        //$req = $db->
     }
 }

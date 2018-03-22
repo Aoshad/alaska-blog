@@ -21,7 +21,7 @@
             {
             ?>
             <div class="card-body">
-              <p class="card-text"><?= nl2br(htmlspecialchars($data['content'])) ?></p>
+              <p class="card-text"><?= html_entity_decode($data['content']) ?></p>
               <a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-primary">Lire plus &rarr;</a>
             </div>
             <div class="card-footer text-muted">

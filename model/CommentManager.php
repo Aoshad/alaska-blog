@@ -40,4 +40,18 @@ class CommentManager extends Manager
 
         return $reportedComments;
     }
+
+    public function keepComment($id)
+    {
+        $db = $this->dbconnect();
+        $keepedComment = $db->prepare('UPDATE comments SET report=0 WHERE ID = ?');
+        $keepedComment->execute(array($id));
+    }
+
+    public function deleteComment($id)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('DELETE FROM comments WHERE id = ?');
+        $req->execute(array($id));
+    }
 }

@@ -22,7 +22,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 back-col">
-                <a><button class="back-warning btn-lg back-btn">Modifier le mot de passe</button></a>
+                <a href="index.php?action=displayModifyPass"><button class="back-warning btn-lg back-btn">Modifier le mot de passe</button></a>
             </div>
         </div>
 

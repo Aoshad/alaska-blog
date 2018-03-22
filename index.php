@@ -76,8 +76,14 @@ try {
             openTinyMce();
         }
 
-        elseif($_POST['action'] == 'addPost') {
+        elseif($_GET['action'] == 'openModifyTinyMce') {
+            openModifyTinyMce($_GET['id']);
+        }
 
+        elseif($_GET['action'] == 'addPost') {
+            if (!empty($_POST['content'])) {
+                addPost($_POST['content']);
+            }
         }
 
         elseif ($_GET['action'] == 'updateDeletePost') {
@@ -94,8 +100,11 @@ try {
         }
 
         elseif ($_GET['action'] == 'modifyPost') {
-            if (isset($_GET['id']) && $_GET['id'] > 0) {
-                modifyPost($_GET['id'], $_GET['contentPost']);
+            if (!empty($_POST['content'])) {
+                modifyPost($_POST['content'], $_GET['id']);
+            }
+            else {
+                throw new Exception('Contenu vide');
             }
         }
 
@@ -110,6 +119,33 @@ try {
 
         elseif ($_GET['action'] == 'moderateComment') {
             moderateComment();
+        }
+
+        elseif ($_GET['action'] == 'keepComment') {
+            if (isset($_GET['id']) == $_GET['id'] > 0 ) {
+                keepComment($_GET['id']);
+            }
+            else {
+                throw new Exception ('La modification n\'a pas été prise en compte');
+            }
+
+        }
+        elseif ($_GET['action'] == 'deleteComment') {
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                deleteComment($_GET['id']);
+            }
+            else {
+                throw new Exception('La suppression n\'a pas pu être effectuée');
+            }
+
+        }
+
+        elseif ($_GET['action'] == 'displayModifyPass') {
+            displayModifyPass();
+        }
+
+        elseif ($_GET['action'] == 'modifyPass') {
+            modifyPass();
         }
     }
 

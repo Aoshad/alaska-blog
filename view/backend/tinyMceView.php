@@ -10,7 +10,7 @@
         <!-- TinyMce Integration -->
         <div class="col-lg-12">
             <form action="index.php?action=addPost" method="post" >
-                <textarea class="tinymce"></textarea>
+                <textarea name="content" id="content" class="tinymce"></textarea>
             </form>
         </div>
 

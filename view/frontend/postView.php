@@ -32,7 +32,7 @@
           <hr>
 
           <!-- Post Content -->
-          <p class="lead"><?= nl2br(htmlspecialchars($post['content'])) ?></p>
+          <p class="lead"><?= html_entity_decode($post['content']) ?></p>
 
           <hr>
 
