@@ -72,14 +72,18 @@ function contactForm() {
     require('view/frontend/contactView.php');
 }
 
-function enterAdmin($pseudo) {
-    if ($pseudo == "JForteroche") {
+function enterAdmin($pseudo, $pass) {
+
+    $LoginManager = new \David\AlaskaBlog\Model\LoginManager();
+    $hash = $LoginManager->getHashedPass($pseudo);
+    $dataBasePseudo = $LoginManager->getPseudo($pass);
+
+    if ($dataBasePseudo == $pseudo && password_verify($pass, $hash)) {
         require('view/backend/adminPanelView.php');
     } else {
         echo 'le mot de passe n\'est pas bon';
-
+        require('view/frontend/loginAdminView.php');
     }
-    require('view/backend/adminPanelView.php');
 }
 
 function logAdmin() {

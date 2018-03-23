@@ -6,17 +6,24 @@ require_once("model/Manager.php");
 
 class LoginManager extends Manager
 {
-    public function getHashedPass()
+    public function getHashedPass($pseudo)
     {
         $db = $this->dbConnect();
-        $HashedPass = $db->query('SELECT pass FROM user ');
+        $req = $db->prepare('SELECT pass FROM user WHERE login = ?');
+        $req->execute(array($pseudo));
+        $hashedPass = $req->fetch();
+
+        return $hashedPass['pass'];
     }
 
-    public function getPseudo()
+    public function getPseudo($pass)
     {
         $db = $this->dbConnect();
-        $req = $db->query('SELECT login FROM user');
+        $req = $db->prepare('SELECT login FROM user WHERE pass = ?');
+        $req->execute(array($pass));
         $dbPseudo = $req->fetch();
+
+        return $dbPseudo;
     }
 
     public function sendNewPass($pass)

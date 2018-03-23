@@ -62,11 +62,11 @@ try {
 
         // LoginManager For Admin
         elseif ($_GET['action'] == 'enterAdmin') {
-            if (!empty($_POST['pseudoInput'])) {
-                enterAdmin($_POST['pseudoInput']);
+            if (!empty($_POST['pseudoInput']) && !empty($_POST['passInput'])) {
+                enterAdmin($_POST['pseudoInput'], $_POST['passInput']);
             }
             else {
-                echo "Le mot de passe n'est pas celui enregistré dans la base de données";
+                echo 'Le mot de passe n\'est pas celui enregistré dans la base de données';
                 logAdmin();
             }
         }
