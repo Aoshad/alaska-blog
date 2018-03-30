@@ -75,8 +75,9 @@ function contactForm() {
 function enterAdmin($pseudo, $pass) {
 
     $LoginManager = new \David\AlaskaBlog\Model\LoginManager();
+
     $hash = $LoginManager->getHashedPass($pseudo);
-    $dataBasePseudo = $LoginManager->getPseudo($pass);
+    $dataBasePseudo = $LoginManager->getPseudo($hash);
 
     if ($dataBasePseudo == $pseudo && password_verify($pass, $hash)) {
         require('view/backend/adminPanelView.php');
@@ -92,5 +93,9 @@ function logAdmin() {
 
 function adminPageDemo() {
     require('view/backend/adminPanelView.php');
+}
+
+function returnHome() {
+    require('view/frontend/homeView.php');
 }
 

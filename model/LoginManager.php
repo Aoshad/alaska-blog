@@ -23,12 +23,13 @@ class LoginManager extends Manager
         $req->execute(array($pass));
         $dbPseudo = $req->fetch();
 
-        return $dbPseudo;
+        return $dbPseudo['login'];
     }
 
     public function sendNewPass($pass)
     {
         $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
+
         $db = $this->dbConnect();
         $req = $db->prepare('UPDATE user SET pass = ? WHERE id = 1');
         $req->execute(array($hashedPass));

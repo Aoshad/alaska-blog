@@ -153,6 +153,9 @@ try {
                 throw new Exception('Entrez un nouveau mot de passe');
             }
         }
+        elseif ($_GET['action'] == 'returnHome') {
+            returnHome();
+        }
 
     }
 

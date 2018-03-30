@@ -14,7 +14,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="textinput">Pseudo</label>
                         <div class="col-md-4">
-                            <input id="textinput" name="pseudoInput" type="text" placeholder="Entrez votre pseudo" class="form-control input-md">
+                            <input id="pseudoInput" name="pseudoInput" type="text" placeholder="Entrez votre pseudo" class="form-control input-md">
 
                         </div>
                     </div>
@@ -23,7 +23,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="passwordinput">Mot de passe</label>
                         <div class="col-md-4">
-                            <input id="passwordinput" name="passInput" type="password" placeholder="Entrez votre mot de passe" class="form-control input-md">
+                            <input id="passInput" name="passInput" type="password" placeholder="Entrez votre mot de passe" class="form-control input-md">
 
                         </div>
                     </div>
